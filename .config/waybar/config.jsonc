@@ -2,6 +2,7 @@
     "layer": "top",
     "position": "top",
     "modules-left": [
+        "custom/launcher",
         "custom/windows",
         "clock",
         "cpu",
@@ -12,20 +13,19 @@
         "group/media"
     ],
     "modules-right": [
-        "custom/notification",
         "power-profiles-daemon",
         "bluetooth",
         "network",
         "pulseaudio",
         "backlight",
-        "battery"
+        "battery",
+        "custom/notification"
     ],
-    "spacing": 4,
     "mode": "dock",
     "fixed-center": true,
     "reload_style_on_change": true,
     "clock": {
-        "format": "{:%H:%M}  ",
+        "format": " {:%H:%M}",
         "format-alt": "{:%A, %B %d, %Y (%R)}  ",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -101,7 +101,7 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰤮 Disconnected",
         "tooltip-format": "{ifname} via {gwaddr}",
-        "on-click": "nm-connection-editor"
+        "on-click": "nmtui"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -135,8 +135,8 @@
             "",
             ""
         ],
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-"
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%-"
     },
     "battery": {
         "states": {
