@@ -26,11 +26,7 @@ return {
 		end
 
 		local servers = {
-			"tsserver",
-			"cssls",
-			"tailwindcss",
 			"html",
-			"jsonls",
 			"eslint",
 			"pyright",
 			"lua_ls",
